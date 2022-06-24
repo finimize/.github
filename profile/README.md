@@ -39,3 +39,9 @@ We practise discontinuous deployment from `master`: a [CI job](https://app.circl
 This section covers the repos named like `com.finimize.financial-data.*`. These are 'polyrepos' jointly implementing our financial data service, which collects stock pricing data from multiple sources, carrying out some ETL-like tidy-up functions, and then serving it over an API to the backend proper (`chivas` above).
 
 👉 [Docs](/dev/null)
+
+## `Hibiki`
+
+This is an HTTP proxy using AWS API gateway that bounces mixpanel events to the mixpanel ingestion API. This proxying is utilised to avoid ad-blockers preventing the recording of mixpanel events by using mixpanel's open-source SDKs for event collection, but routing the events through this server before sending them to Mixpanel.
+
+👉 [Docs](https://github.com/finimize/hibiki)
